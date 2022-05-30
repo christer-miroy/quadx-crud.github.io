@@ -33,6 +33,9 @@
                         <router-link to="/customer_list/view_customer/:id" class="btn btn-primary btn-sm fw-bold">
                             <i class="bi bi-eye"></i> Customer Details
                         </router-link>
+                        <button class="btn btn-danger btn-sm fw-bold" @click.prevent="deleteCustomer(customer.id)">
+                            <i class="bi bi-pencil"></i> Delete Customer
+                        </button>
                     </td>
                 </tr>
             </tbody>
@@ -60,6 +63,18 @@
                 await axios.get(url).then(response => {
                     this.customers = response.data.customers;
                     console.log(this.customers);
+                }).catch(error => {
+                    console.log(error);
+                });
+            },
+            async deleteCustomer(id) {
+                let url = `http://127.0.0.1:8000/api/delete_customer/${id}`;
+                await axios.delete(url).then(response => {
+                    if (response.data.code == 200) {
+                        alert(response.data.message);
+                        this.getCustomers();
+
+                    }
                 }).catch(error => {
                     console.log(error);
                 });

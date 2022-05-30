@@ -20,4 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 */
 
+//view customer list
 Route::get('customers',[App\Http\Controllers\CustomerController::class,'customers']);
+
+//add customer
+Route::post('save_customer',[App\Http\Controllers\CustomerController::class,'saveCustomer']);
+
+//delete customer
+Route::delete('delete_customer/{id}',[App\Http\Controllers\CustomerController::class,'deleteCustomer']);

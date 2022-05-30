@@ -53,7 +53,7 @@
             </div>
             <!--image-->
             <div class="col-md-4">
-                <img src="https://cdn5.vectorstock.com/i/1000x1000/19/89/male-profile-icon-white-on-the-blue-background-vector-3451989.jpg" alt="" class="contact-img" />
+                <img src="https://cdn5.vectorstock.com/i/1000x1000/19/89/male-profile-icon-white-on-the-blue-background-vector-3451989.jpg" alt="" class="customer-img" />
             </div>
         </div>
     </div>

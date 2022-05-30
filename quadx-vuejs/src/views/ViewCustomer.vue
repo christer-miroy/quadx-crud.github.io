@@ -10,9 +10,7 @@
                 <router-link to="/customer_list/edit_customer/:id" class="btn btn-warning fw-bold">
                     <i class="bi bi-pencil"></i> Edit Customer Details
                 </router-link>
-                <button class="btn btn-danger fw-bold">
-                    <i class="bi bi-pencil"></i> Delete Customer
-                </button>
+                
             </div>        
         </div>
     </div>
@@ -22,7 +20,7 @@
         <div class="row align-items-center">
             <!--image-->
             <div class="col-md-4">
-                <img src="https://cdn5.vectorstock.com/i/1000x1000/19/89/male-profile-icon-white-on-the-blue-background-vector-3451989.jpg" alt="" class="contact-img-big" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Betty-boop-opening-title.jpg" alt="" class="customer-img-big" />
             </div>
             <div class="col-md-6">
                 <ul class="list-group">
@@ -39,8 +37,12 @@
 </template>
 
 <script>
+
     export default {
-        name: 'ViewCustomer'
+        name: 'ViewCustomer',
+        methods: {
+            
+        }
     }
 </script>
 
