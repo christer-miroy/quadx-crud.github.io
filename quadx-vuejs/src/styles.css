@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif !important;
+    background-color: #B4DBDB !important;
+    color: #3B37A6 !important;
+}
+
+.navbar{
+    background-color: #88BCBC;
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+}
+
+.navbar-brand{
+    color: #41628A;
+    text-shadow: 2cm;
+}
+
+.contact-img {
+    width: 140px;
+    border-radius: 50%;
+}
+
+.contact-img-big {
+    width: 200px;
+    border-radius: 50%;
+}
