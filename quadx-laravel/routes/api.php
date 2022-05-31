@@ -28,3 +28,9 @@ Route::post('save_customer',[App\Http\Controllers\CustomerController::class,'sav
 
 //delete customer
 Route::delete('delete_customer/{id}',[App\Http\Controllers\CustomerController::class,'deleteCustomer']);
+
+//populate the fields of the customer
+Route::get('get_customer/{id}',[App\Http\Controllers\CustomerController::class,'getCustomer']);
+
+//update selected customer
+Route::post('update_customer/{id}',[App\Http\Controllers\CustomerController::class,'updateCustomer']);

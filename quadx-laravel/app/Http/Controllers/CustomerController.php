@@ -54,4 +54,29 @@ class CustomerController extends Controller
             ]);
         }
     }
+
+    //populate the fields
+    public function getCustomer($id){
+        $customer = Customer::find($id);
+        //get the result of the specific id
+        return response() -> json($customer);
+    }
+
+    //update customer
+    public function updateCustomer($id, Request $request) {
+        $customer = Customer::where('id', $id) -> first();
+        //first() - take the first row of the data id needed
+        $customer -> firstName = $request -> firstName;
+        $customer -> lastName = $request -> lastName;
+        $customer -> photoURL = $request -> photoURL;
+        $customer -> address = $request -> address;
+        $customer -> mobile = $request -> mobile;
+        $customer -> email = $request -> email;
+        $customer -> dateOfBirth = $request -> dateOfBirth;
+        $customer -> save();
+        return response() -> json([
+            'message' => 'Customer updated successfully',
+            'code' => 200
+        ]);
+    }
 }

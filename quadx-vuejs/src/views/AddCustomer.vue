@@ -3,17 +3,19 @@
     <div class="container text-center mt-3">
         <div class="row">
             <div class="col">
-                <h2>Add Customer</h2>
-            </div>
-            <div class="col">
-                <router-link to="/" class="btn btn-primary btn-sm"><i class="bi bi-arrow-left-circle"></i> Back to Customer List</router-link>
+                <router-link to="/" class="btn btn-primary btn-sm" @click="cancellAddCustomer"><i class="bi bi-arrow-left-circle"></i> Customer List</router-link>
             </div>
         </div>
     </div>
 
     <!--body-->
     <div class="container mt-3">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <h2>Add Customer</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
             <div class="col-md-6">
                 <!--error messages-->
                 <div class="alert alert-danger mt-4" v-if="errors.length">
@@ -70,7 +72,7 @@
                             </label>
                             <input type="date" class="form-control" v-model="customer.dateOfBirth" />
                         </div>
-                        <button class="btn btn-primary btn-sm mt-4"><i class="bi bi-check-circle"></i> Submit</button>
+                        <button class="btn btn-primary btn-sm"><i class="bi bi-check-circle"></i> Submit</button>
                     </fieldset>
                 </form>
             </div>
@@ -101,6 +103,9 @@ import axios from 'axios';
             }
         },
         methods: {
+            async cancellAddCustomer() {
+                alert('Add customer cancelled');
+            },
             async saveCustomer() {
                 this.errors = [];
                 if (!this.customer.firstName) {

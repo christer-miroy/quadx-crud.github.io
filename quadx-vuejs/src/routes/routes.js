@@ -9,7 +9,7 @@ const routes = [
     {
         name: 'Home',
         path: '/',
-        redirect: '/customer_list'
+        redirect: '/customer_list',
     },
     {
         name: 'CustomerList',
@@ -23,12 +23,12 @@ const routes = [
     },
     {
         name: 'EditCustomer',
-        path: '/customer_list/edit_customer/:id',
+        path: '/customer/edit/:id?',
         component: EditCustomer
     },
     {
         name: 'ViewCustomer',
-        path: '/customer_list/view_customer/:id',
+        path: '/customer/view/:id?',
         component: ViewCustomer
     },
     {
